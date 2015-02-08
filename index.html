@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Pagina realizata cu JqueryMobile</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script><!--	script pagina 1
+			var windowWidth = $(window).width(); //retrieve current window width
+			var windowHeight = $(window).height(); //retrieve current window height
+			$(document).ready(function(){
+				$("#play").click(function(){
+					wW = windowWidth - 110;
+					wH = windowHeight - 260;
+					$(".cutie").animate({left: wW});
+					$(".cutie").animate({marginTop: wH, height: 100, width:100});
+					$(".cutie").animate({left: 40});
+					$(".cutie").animate({marginTop: 30, height: 50, width:50});
+				});
+			});
+		-->
+		</script> 
+		<script><!--	script pagina 2
+			$(document).ready(function(){
+				$("#calc").click(function(){
+					var suma = 0;
+					suma = parseInt($("#nr1").val()) + parseInt($("#nr2").val());
+					$("#rez").text(suma);
+
+					
+			});
+			});
+		-->
+		</script>
+		<script><!-- script pagina 3
+			var windowWidth = $(window).width(); //retrieve current window width
+			var windowHeight = $(window).height(); //retrieve current window height
+			$(document).ready(function(){
+					$("#form1").hide();
+					wW = windowWidth - 110;
+					wH = windowHeight - 260;
+					$(".cutie1").animate({left: wW});
+					$(".cutie1").animate({marginTop: wH, height: 100, width:100});
+					$(".cutie1").animate({left: 40});
+					$(".cutie1").animate({marginTop: 30, height: 50, width:50});
+					$(".cutie1").hide(1000, function(){$("#form1").show(1000);
+					$("#calc1").click(function(){
+					var suma = 0;
+					suma = parseInt($("#nr3").val()) + parseInt($("#nr4").val());
+					$("#rez1").text(suma);});
+				});
+			});
+		-->
+		</script>
+		
+		<script><!-- script pagina 4
+			$(document).ready(function(){
+				$("#divYoutube").hide();
+				$("#divMaps").hide();
+					$("#btnYoutube").click(function(){
+						$("#divMaps").fadeOut();
+						$("#divYoutube").toggle(1000);
+					});
+					
+					$("#btnMaps").click(function(){
+						$("#divYoutube").fadeOut();
+						$("#divMaps").toggle(1000);});
+				});
+		-->
+		</script>
+</head>
+
+<body>
+<div data-role="page" id="pag1"align="center">
+	<div data-role="header"data-position="fixed">
+		<div data-role="navbar">
+			<ul >
+			<li><a href="#"class="ui-btn"data-transition="pop">Home</a></li>
+			<li><a href="#pag2"class="ui-btn"data-transition="slide"data-direction="slideUp">B2</a></li>
+			<li><a href="#pag3"class="ui-btn"data-transition="slide"data-direction="slideUp">B3</a></li>
+			<li><a href="#pag4"class="ui-btn"data-transition="slide"data-direction="slideUp">B4</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	
+	<div data-role="main" class="ui-content">
+		<div>
+		<a id="play"class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext">PLAY</a>
+		</div>
+		<div class="cutie" style="background:black;height:50px;width:50px;position:absolute;"></div>
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; Radu DAN</p>
+	</div>
+</div>
+
+<div data-role="page" id="pag2"align="center">
+	<div data-role="header"data-position="fixed">
+		<div data-role="navbar">
+			<ul >
+			<li><a href="#pag1"class="ui-btn"data-transition="slide"data-direction="slideDown">Home</a></li>
+			<li><a href="#pag2"class="ui-btn"data-transition="pop">B2</a></li>
+			<li><a href="#pag3"class="ui-btn"data-transition="slide"data-direction="slideUp">B3</a></li>
+			<li><a href="#pag4"class="ui-btn"data-transition="slide"data-direction="slideUp">B4</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div data-role="main" class="ui-content">
+	<div id="form" align="center">
+			<table>
+			<form>
+				<tr>
+					<td><label>Introduceti primul numar: </label></td>
+					<td><input type="text" id="nr1"></td>
+				</tr>
+				<tr>
+					<td><label>Introduceti al doilea numar: </label></td>
+					<td><input type="text" id="nr2"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" id="calc" value="Calculeaza suma!!!"></td>
+				</tr>
+				<tr>
+					<td> <label> Suma este:</label></td>
+					<td><span id="rez"></span></td>
+				</tr>
+			</form>
+			</table>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; Radu DAN</p>
+	</div>
+
+</div>
+
+<div data-role="page" id="pag3"align="center">
+	<div data-role="header"data-position="fixed">
+		<div data-role="navbar">
+			<ul >
+			<li><a href="#pag1"class="ui-btn"data-transition="slide"data-direction="slideDown">Home</a></li>
+			<li><a href="#pag2"class="ui-btn"data-transition="slide"data-direction="slideDown">B2</a></li>
+			<li><a href="#pag3"class="ui-btn"data-transition="pop">B3</a></li>
+			<li><a href="#pag4"class="ui-btn"data-transition="slide"data-direction="slideUp">B4</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div data-role="main" class="ui-content">
+	<div class="cutie1" style="background:black;height:50px;width:50px;position:absolute;"></div>
+	<div id="form1" align="center">
+			<table>
+			<form>
+				<tr>
+					<td><label>Introduceti primul numar: </label></td>
+					<td><input type="text" id="nr3"></td>
+				</tr>
+				<tr>
+					<td><label>Introduceti al doilea numar: </label></td>
+					<td><input type="text" id="nr4"></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><input type="button" id="calc1" value="Calculeaza suma!!!"></td>
+				</tr>
+				<tr>
+					<td> <label> Suma este:</label></td>
+					<td><span id="rez1"></span></td>
+				</tr>
+			</form>
+			</table>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; Radu DAN</p>
+	</div>
+
+</div>
+
+<div data-role="page" id="pag4"align="center">
+	<div data-role="header"data-position="fixed">
+		<div data-role="navbar">
+			<ul >
+			<li><a href="#pag1"class="ui-btn"data-transition="slide"data-direction="slideUp">Home</a></li>
+			<li><a href="#pag2"class="ui-btn"data-transition="slide"data-direction="slideUp">B2</a></li>
+			<li><a href="#pag3"class="ui-btn"data-transition="slide"data-direction="slideUp">B3</a></li>
+			<li><a href="#pag4"class="ui-btn"data-transition="flip">B4</a></li>
+			</ul>
+		</div>
+		
+	</div>
+	<div data-role="main" class="ui-content">
+	<div id="inside" align="center">
+			<table>
+				<tr>
+					<td width="50%" align="right">
+						<p> asldasd asldas ldas</p>
+						<p> asljkdaskd jklasd  kajsd k  askdj </p>
+						<p> asldasd asldas ldas</p>
+						<p> asljkdaskd jklasd  kajsd k  askdj </p>
+					</td>
+					<td width="50%">
+						<img src="http://goo.gl/rryjP8" style="width:50%; height:50%">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" width="100%">
+						<p> asldasd asldas ldas</p>
+						<p> asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd asljkdaskd jklasd  kajsd k  askdj </p>
+					</td>
+				</tr>
+				
+			</table>
+			<div data-role="controlgroup"data-type="horizontal">			
+				<input type="button" value="youtube" id="btnYoutube">
+				<input type="button" value="maps" id="btnMaps">
+			</div>
+		</div>
+		<div id="divYoutube" width="75%" height="75%%" align="center">
+			<iframe  src="https://www.youtube.com/embed/r2Hlaf6cEQU" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div id="divMaps" width="75%" height="75%" align="center">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10931.400087026817!2d23.60304373944092!3d46.76785262368334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1422958615963"  frameborder="0" style="border:0"></iframe>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<p>&copy; Radu DAN</p>
+	</div>
+
+</div>
+</body>
+</html>
