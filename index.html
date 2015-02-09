@@ -1,9 +1,11 @@
 <html>
 <head>
 <title>Pagina realizata cu JqueryMobile</title>
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		
 		<script><!--	script pagina 1
 			var windowWidth = $(window).width(); //retrieve current window width
 			var windowHeight = $(window).height(); //retrieve current window height
@@ -34,24 +36,24 @@
 		<script><!-- script pagina 3
 			var windowWidth = $(window).width(); //retrieve current window width
 			var windowHeight = $(window).height(); //retrieve current window height
-			$(document).ready(function(){
+			$(document).on("pagecreate","#pag3",function(){
 					$("#form1").hide();
 					wW = windowWidth - 110;
 					wH = windowHeight - 260;
-					$(".cutie1").animate({left: wW});
-					$(".cutie1").animate({marginTop: wH, height: 100, width:100});
-					$(".cutie1").animate({left: 40});
-					$(".cutie1").animate({marginTop: 30, height: 50, width:50});
-					$(".cutie1").hide(1000, function(){$("#form1").show(1000);
+					$("#cutie1").animate({left: wW});
+					$("#cutie1").animate({marginTop: wH, height: 100, width:100});
+					$("#cutie1").animate({left: 40});
+					$("#cutie1").animate({marginTop: 30, height: 50, width:50});
+					$("#cutie1").hide(1000, function(){$("#form1").show(1000);
 					$("#calc1").click(function(){
 					var suma = 0;
 					suma = parseInt($("#nr3").val()) + parseInt($("#nr4").val());
 					$("#rez1").text(suma);});
 				});
 			});
+
 		-->
 		</script>
-		
 		<script><!-- script pagina 4
 			$(document).ready(function(){
 				$("#divYoutube").hide();
@@ -85,7 +87,7 @@
 	
 	<div data-role="main" class="ui-content">
 		<div>
-		<a id="play"class="ui-btn ui-corner-all ui-icon-star ui-btn-icon-notext">PLAY</a>
+		<a id="play"class="ui-btn ui-corner-all ui-icon-star, ui-btn-icon-notext">PLAY</a>
 		</div>
 		<div class="cutie" style="background:black;height:50px;width:50px;position:absolute;"></div>
 	</div>
@@ -149,7 +151,7 @@
 		
 	</div>
 	<div data-role="main" class="ui-content">
-	<div class="cutie1" style="background:black;height:50px;width:50px;position:absolute;"></div>
+	<div id="cutie1" style="background:black;height:50px;width:50px;position:absolute;"></div>
 	<div id="form1" align="center">
 			<table>
 			<form>
